@@ -16,6 +16,12 @@ export default {
     }
   },
   mounted () {
+    // Use the input event for instant update of content
+    this.$storybridge.on('input', (event) => {
+      if (event.story.id === this.story.id) {
+        this.story.content = event.story.content
+      }
+    })
     // Use the bridge to listen the events
     this.$storybridge.on(['published', 'change'], (event) => {
       // window.location.reload()
@@ -24,6 +30,15 @@ export default {
         force: true,
       })
     })
+  },
+  async fetch(context) {
+    // Loading reference data - Articles in our case
+    if(context.store.state.references.loaded !== '1') {
+
+      let articlesRefRes = await context.app.$storyapi.get(`cdn/stories/`, { starts_with: 'articles/', version: 'draft' })
+      context.store.commit('references/setArticles', articlesRefRes.data.stories)
+      context.store.commit('references/setLoaded', '1')
+    }
   },
   asyncData (context) {
     // // This what would we do in real project
