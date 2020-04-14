@@ -3,10 +3,10 @@
     <div>
       <logo />
       <h1 class="title">
-        talk-blazingly-fast-nuxtjs
+        Going headless with Nuxt!
       </h1>
       <h2 class="subtitle">
-        My great Nuxt.js project
+        How to connect Nuxt.js with Storyblok
       </h2>
       <div class="links">
         <a
