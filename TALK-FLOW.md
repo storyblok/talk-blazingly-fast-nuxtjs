@@ -1,5 +1,3 @@
-
-
 # Live coding 
 - create nuxt.js
 
@@ -10,6 +8,7 @@
 - show the welcome screen
 
 ## Create Storyblok Space
+- `Blazingly Fast - Showcase`
 - preview sample content & components
 - visual editor & content editor
 - show preview TOKEN
