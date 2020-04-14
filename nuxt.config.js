@@ -28,6 +28,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/components'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -40,10 +41,18 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    // Doc: https://github.com/storyblok/storyblok-nuxt
+    [
+      'storyblok-nuxt',
+      {
+        accessToken: 'STORYBLOK_SPACE_TOKEN',
+        cacheProvider: 'memory'
+      }
+    ],
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
+    '@nuxtjs/dotenv'
   ],
   /*
   ** Axios module configuration

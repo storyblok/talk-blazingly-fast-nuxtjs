@@ -7,7 +7,11 @@
 ```bash
 # install dependencies
 $ yarn install
+```
 
+**Replace `STORYBLOK_SPACE_TOKEN` in nuxt.config.js with your API TOKEN from Storyblok space.**
+
+```
 # serve with hot reload at localhost:3000
 $ yarn dev
 
