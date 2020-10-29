@@ -24,7 +24,7 @@
 
 ## Create the default components & explain in Nuxt.js
 - Page, Teaser, Grid, Feature
-- components.js
+- nuxt.config.js -> components: true
 
 ## Explain AsyncData
 - Load from draft
@@ -33,16 +33,14 @@
 
 ## Create Article & FeaturedArticles in Storyblok
 - Article
-  - title, intro, author
+  - hero_image, title, intro, author, prose
 - Create Article
 - FeaturedArticles
   - articles - `articles/`
 - Add FeaturedArticles to Page
-  - explain referenced
+  - explain those are references
 
 ## Create Article & FeaturedArticles in Nuxt.js
-  - uncomment & explain
-
-## Fetch referenced articles
+  - uncomment & explain resolve relations
 
 ## Show sorting
