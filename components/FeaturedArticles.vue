@@ -8,7 +8,7 @@
     </div>
     <ul class="flex -mx-8">
       <li
-        v-for="article in sortedArticles" :key="article._uid"
+        v-for="article in blok.articles" :key="article._uid"
         class="flex-auto px-8" style="min-width: 33%">
         <article-teaser
           v-if="article.content"
@@ -25,25 +25,6 @@ export default {
       type: Object,
       required: true
     }
-  },
-  computed: {
-    sortedArticles() {
-      // Load reference data/content from store
-      const featuredArticles = this.$store.state.references.articles.filter((article) => {
-        return this.blok.articles.includes(article.uuid)
-      })
-
-      // Enable the ordering of the article previews
-      featuredArticles.sort((a, b) => {
-        return this.blok.articles.indexOf(a.uuid) - this.blok.articles.indexOf(b.uuid);
-      })
-
-      return featuredArticles
-    }
   }
 }
 </script>
-
-<style>
-
-</style>

@@ -19,7 +19,10 @@ export default {
     // Use the input event for instant update of content
     this.$storybridge.on('input', (event) => {
       if (event.story.id === this.story.id) {
-        this.story.content = event.story.content
+        this.$storybridge.resolveRelations(['featured-articles.articles'], (event) => {
+          // event.story.content has now the resolved relations
+          this.story.content = event.story.content
+        })
       }
     })
     // Use the bridge to listen the events
@@ -31,15 +34,6 @@ export default {
       })
     })
   },
-  async fetch(context) {
-    // Loading reference data - Articles in our case
-    if(context.store.state.references.loaded !== '1') {
-
-      let articlesRefRes = await context.app.$storyapi.get(`cdn/stories/`, { starts_with: 'articles/', version: 'draft' })
-      context.store.commit('references/setArticles', articlesRefRes.data.stories)
-      context.store.commit('references/setLoaded', '1')
-    }
-  },
   asyncData (context) {
     // // This what would we do in real project
     // const version = context.query._storyblok || context.isDev ? 'draft' : 'published'
@@ -47,7 +41,8 @@ export default {
 
     // Load the JSON from the API - loadig the home content (index page)
     return context.app.$storyapi.get('cdn/stories/home', {
-      version: 'draft'
+      version: 'draft',
+      resolve_relations: 'featured-articles.articles'
     }).then((res) => {
       return res.data
     }).catch((res) => {
