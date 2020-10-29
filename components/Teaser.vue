@@ -1,9 +1,9 @@
 <template>
-  <div
+  <h2
     v-editable="blok"
-    class="py-8 mb-6 text-5xl font-bold text-center">
+    class="py-10 font-serif text-3xl text-center">
     {{ blok.headline }}
-  </div>
+  </h2>
 </template>
 
 <script>

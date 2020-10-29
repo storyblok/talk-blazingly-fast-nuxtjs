@@ -1,8 +1,8 @@
 <template>
   <div
     v-editable="blok"
-    class="py-2">
-    <h1 class="text-lg">{{ blok.name }}</h1>
+    class="text-center">
+    <h2 class="text-xl font-medium">{{ blok.name }}</h2>
   </div>
 </template>
 
