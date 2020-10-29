@@ -1,6 +1,5 @@
 
 export default {
-  mode: 'universal',
   /*
   ** Headers of the page
   */
@@ -45,7 +44,7 @@ export default {
     [
       'storyblok-nuxt',
       {
-        accessToken: 'STORYBLOK_SPACE_TOKEN',
+        accessToken: 'TuLof6CrPcdeCeBnBpPGAwtt',
         cacheProvider: 'memory'
       }
     ],
