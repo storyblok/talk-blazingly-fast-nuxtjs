@@ -24,7 +24,7 @@
 
 ## Create the default components & explain in Nuxt.js
 - Page, Teaser, Grid, Feature
-- nuxt.config.js -> components: true
+- nuxt.config.js -> plugins import compoennts.js
 
 ## Explain AsyncData
 - Load from draft
