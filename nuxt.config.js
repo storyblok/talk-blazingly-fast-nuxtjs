@@ -42,7 +42,7 @@ export default {
   modules: [
     // Doc: https://github.com/storyblok/storyblok-nuxt
     [
-      'storyblok-nuxt',
+      '@storyblok/nuxt',
       {
         accessToken: 'TuLof6CrPcdeCeBnBpPGAwtt',
         cacheProvider: 'memory'

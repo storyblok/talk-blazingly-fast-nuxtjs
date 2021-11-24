@@ -11,12 +11,12 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.13.4",
+    "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/dotenv": "^1.4.1",
-    "nuxt": "^2.15.6",
-    "storyblok-nuxt": "^2.0.1"
+    "@storyblok/nuxt": "^2.0.4",
+    "nuxt": "^2.15.8"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^4.1.2"
+    "@nuxtjs/tailwindcss": "^4.2.1"
   }
 }
