@@ -24,11 +24,9 @@ export default {
   css: [
   ],
   /*
-  ** Plugins to load before mounting the App
+  ** Auto-import of components
   */
-  plugins: [
-  // '~/plugins/components'
-  ],
+  components: true,
   /*
   ** Nuxt.js dev-modules
   */
@@ -42,7 +40,7 @@ export default {
   modules: [
     // // Doc: https://github.com/storyblok/storyblok-nuxt
     // [
-    //   'storyblok-nuxt',
+    //   '@storyblok/nuxt',
     //   {
     //     accessToken: 'STORYBLOK_SPACE_TOKEN',
     //     cacheProvider: 'memory'
